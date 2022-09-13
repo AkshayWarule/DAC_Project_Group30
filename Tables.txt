@@ -1,0 +1,95 @@
+create table donorprofile
+(
+    donorid int NOT NULL AUTO_INCREMENT,
+    firstname varchar(255) not null,
+    middlename varchar(255) not null,
+    lastname varchar(255) not null,
+    emailid varchar(255) not null,
+    contactnumber char(10) not null,
+    profession varchar(255) not null,
+    birthdate date not null,
+    maritalstatus varchar(255) not null,
+    city varchar(255) not null,
+    state varchar(255) not null,
+    country varchar(255) not null default 'India',
+    address varchar(255) not null,
+    pincode char(6) not null,
+    gender varchar(255) not null,
+    aadhaarnumber char(12) not null,
+    password varchar(255) not null,
+    accountstatus varchar(255) default 'Active',
+    primary key(donorid)
+);
+
+
+create table fundraiserprofile
+(
+    fundraiserid int NOT NULL AUTO_INCREMENT,
+    firstname varchar(255) not null,
+    middlename varchar(255) not null,
+    lastname varchar(255) not null,
+    emailid varchar(255) not null,
+    contactnumber char(10) not null,
+    profession varchar(255) not null,
+    birthdate date not null,
+    maritalstatus varchar(255) not null,
+    city varchar(255) not null,
+    state varchar(255) not null,
+    country varchar(255) default 'India',
+    address varchar(255) not null,
+    pincode char(6) not null,
+    gender varchar(255) not null,
+    aadhaarnumber char(12) not null,
+    password varchar(255) not null,
+    accountstatus varchar(255) default 'Active',
+    academicqualification varchar(255) not null,
+    organizationname varchar(255) not null,
+    govtregistrationnumber varchar(255) not null,
+    fundraisercategory varchar(255) not null,
+    organizationcity varchar(255) not null,
+    organizationstate varchar(255) not null,
+    organizationcountry varchar(255) default 'India',
+    organizationaddress varchar(255) not null,
+    organizationwebsite varchar(255) not null,
+    organizationdescription varchar(255) not null,
+    primary key(fundraiserid)
+);
+
+
+create table guestuserprofile
+(
+    guestuserid int NOT NULL AUTO_INCREMENT,
+    firstname varchar(255) not null,
+    middlename varchar(255) not null,
+    lastname varchar(255) not null,
+    emailid varchar(255) not null,
+    contactnumber char(10) not null,
+    profession varchar(255) not null,
+    maritalstatus varchar(255) not null,
+    city varchar(255) not null,
+    state varchar(255) not null,
+    country varchar(255) not null default 'India',
+    gender varchar(255) not null,
+    password varchar(255) not null,
+    accountstatus varchar(255) default 'Active',
+    primary key(guestuserid)
+);
+
+
+create table adminprofile
+(
+    adminid int NOT NULL AUTO_INCREMENT,
+    firstname varchar(255) not null,
+    middlename varchar(255) not null,
+    lastname varchar(255) not null,
+    emailid varchar(255) not null,
+    contactnumber char(10) not null,
+    maritalstatus varchar(255) not null,
+    city varchar(255) not null,
+    state varchar(255) not null,
+    country varchar(255) not null default 'India',
+    gender varchar(255) not null,
+    password varchar(255) not null,
+    accountstatus varchar(255) default 'Active',
+    primary key(adminid)
+);
